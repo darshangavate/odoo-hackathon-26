@@ -7,6 +7,10 @@ const auditSchema = new mongoose.Schema(
       ref: "Department",
       required: true,
     },
+    location: {
+      type: String,
+      default: "",
+    },
 
     auditors: [
       {

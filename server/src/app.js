@@ -10,6 +10,9 @@ import categoryRoutes from "./routes/categoryRoutes.js";
 import employeeRoutes from "./routes/employeeRoutes.js";
 import assetRoutes from "./routes/assetRoutes.js";
 import allocationRoutes from "./routes/allocationRoutes.js";
+import bookingRoutes from "./routes/bookingRoutes.js";
+import maintenanceRoutes from "./routes/maintenanceRoutes.js";
+import auditRoutes from "./routes/auditRoutes.js";
 
 const app = express();
 
@@ -28,6 +31,12 @@ app.get("/", (req, res) => {
 app.use("/api/auth", authRoutes);
 app.use("/api/departments", departmentRoutes);
 app.use("/api/categories", categoryRoutes);
+app.use("/api/employees", employeeRoutes);
+app.use("/api/assets", assetRoutes);
+app.use("/api/allocations", allocationRoutes);
+app.use("/api/bookings", bookingRoutes);
+app.use("/api/maintenances", maintenanceRoutes);
+app.use("/api/audits", auditRoutes);
 
 app.use(notFound);
 app.use(errorHandler);
