@@ -1,96 +1,115 @@
 import mongoose from "mongoose";
 
 const assetSchema = new mongoose.Schema(
-  {
-    assetTag: {
-      type: String,
-      required: true,
-      unique: true,
-    },
+    {
+        assetTag: {
+            type: String,
+            required: true,
+            unique: true,
+        },
 
-    name: {
-      type: String,
-      required: true,
-      trim: true,
-    },
+        name: {
+            type: String,
+            required: true,
+            trim: true,
+        },
 
-    category: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Category",
-      required: true,
-    },
+        category: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Category",
+            required: true,
+        },
 
-    serialNumber: {
-      type: String,
-      unique: true,
-      sparse: true,
-      trim: true,
-    },
+        serialNumber: {
+            type: String,
+            unique: true,
+            sparse: true,
+            trim: true,
+        },
 
-    department: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Department",
-    },
+        department: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Department",
+            default: null,
+        },
 
-    location: {
-      type: String,
-      required: true,
-      trim: true,
-    },
+        location: {
+            type: String,
+            required: true,
+            trim: true,
+        },
 
-    acquisitionDate: {
-      type: Date,
-    },
+        acquisitionDate: {
+            type: Date,
+            default: null,
+        },
 
-    acquisitionCost: {
-      type: Number,
-      default: 0,
-    },
+        nextMaintenanceDate: {
+            type: Date,
+            default: null,
+        },
 
-    condition: {
-      type: String,
-      enum: ["Excellent", "Good", "Fair", "Poor", "Damaged"],
-      default: "Good",
-    },
+        retirementDate: {
+            type: Date,
+            default: null,
+        },
 
-    status: {
-      type: String,
-      enum: [
-        "Available",
-        "Allocated",
-        "Reserved",
-        "Under Maintenance",
-        "Lost",
-        "Retired",
-        "Disposed",
-      ],
-      default: "Available",
-    },
+        acquisitionCost: {
+            type: Number,
+            default: 0,
+        },
 
-    shared: {
-      type: Boolean,
-      default: false,
-    },
+        condition: {
+            type: String,
+            enum: [
+                "Excellent",
+                "Good",
+                "Fair",
+                "Poor",
+                "Damaged",
+            ],
+            default: "Good",
+        },
 
-    image: {
-      type: String,
-      default: "",
-    },
+        status: {
+            type: String,
+            enum: [
+                "Available",
+                "Allocated",
+                "Reserved",
+                "Under Maintenance",
+                "Lost",
+                "Retired",
+                "Disposed",
+            ],
+            default: "Available",
+        },
 
-    documents: [
-      {
-        type: String,
-      },
-    ],
+        shared: {
+            type: Boolean,
+            default: false,
+        },
 
-    createdBy: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "User",
+        image: {
+            type: String,
+            default: "",
+        },
+
+        documents: [
+            {
+                type: String,
+            },
+        ],
+
+        createdBy: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "User",
+            default: null,
+        },
     },
-  },
-  {
-    timestamps: true,
-  }
+    {
+        timestamps: true,
+    }
 );
 
 export default mongoose.model("Asset", assetSchema);
