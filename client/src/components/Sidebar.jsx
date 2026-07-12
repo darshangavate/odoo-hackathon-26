@@ -11,33 +11,33 @@ export default function Sidebar() {
 
       <nav>
 
-        <NavLink to="/dashboard" end>
+        <NavLink to="/dashboard">
           Dashboard
         </NavLink>
 
-       <NavLink to="/organization-setup">
-  Organization Setup
-</NavLink>
+        <NavLink to="/organization-setup">
+          Organization Setup
+        </NavLink>
 
         <NavLink to="/assets">
           Assets
         </NavLink>
 
-        <NavLink to="/allocation">
+        <NavLink to="/allocation-transfer">
           Allocation & Transfer
         </NavLink>
 
         <NavLink to="/resource-booking">
-    Resource Booking
-</NavLink>
+          Resource Booking
+        </NavLink>
 
         <NavLink to="/maintenance">
           Maintenance
         </NavLink>
 
-       <NavLink to="/audit">
-    Audit
-</NavLink>
+        <NavLink to="/audit">
+          Audit
+        </NavLink>
 
         <NavLink to="/reports">
           Reports

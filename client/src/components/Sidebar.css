@@ -1,15 +1,22 @@
 .sidebar{
     width:260px;
-    min-height:100vh;
+    height:100vh;
+    flex-shrink:0;
+    position:sticky;
+    top:0;
+
     background:#1f2937;
     color:white;
+
     padding:25px 18px;
+
+    overflow-y:auto;
 }
 
 .logo{
     font-size:28px;
-    margin-bottom:35px;
     font-weight:700;
+    margin-bottom:35px;
 }
 
 .sidebar nav{
@@ -19,12 +26,19 @@
 }
 
 .sidebar a{
-    text-decoration:none;
-    color:#d1d5db;
+    display:block;
+
     padding:12px 16px;
-    border-radius:8px;
-    transition:.25s;
+
+    border-radius:10px;
+
+    color:#d1d5db;
+
+    text-decoration:none;
+
     font-size:15px;
+
+    transition:all .25s ease;
 }
 
 .sidebar a:hover{
@@ -35,4 +49,18 @@
 .sidebar a.active{
     background:#2563eb;
     color:white;
+    font-weight:600;
+}
+
+.sidebar::-webkit-scrollbar{
+    width:6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb{
+    background:#4b5563;
+    border-radius:10px;
+}
+
+.sidebar::-webkit-scrollbar-track{
+    background:transparent;
 }
