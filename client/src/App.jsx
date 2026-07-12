@@ -7,10 +7,9 @@ import OrganizationSetup from "./pages/OrganizationSetup";
 import Assets from "./pages/Assets";
 import ResourceBooking from "./pages/ResourceBooking";
 import Audit from "./pages/Audit";
-
+import Notifications from "./pages/Notifications";
 import AdminLayout from "./layouts/AdminLayout";
 
-import AdminLayout from "./layouts/AdminLayout";
 
 function App() {
   return (
@@ -34,6 +33,10 @@ function App() {
           <Route
             path="/organization-setup"
             element={<OrganizationSetup />}
+          />
+          <Route
+            path="/notifications"
+            element={<Notifications />}
           />
 
         </Route>

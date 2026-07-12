@@ -1,0 +1,48 @@
+.notifications-page{
+    width:100%;
+}
+
+.notifications-page h1{
+    margin-bottom:30px;
+}
+
+.filter-buttons{
+    display:flex;
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.table-container{
+    background:var(--card);
+    border-radius:var(--radius);
+    overflow:hidden;
+    box-shadow:var(--shadow);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+thead{
+    background:var(--primary);
+    color:white;
+}
+
+th{
+    padding:18px;
+    text-align:left;
+}
+
+td{
+    padding:18px;
+    border-bottom:1px solid var(--border);
+}
+
+tbody tr{
+    transition:.2s;
+}
+
+tbody tr:hover{
+    background:#eff6ff;
+}
