@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Login from "./pages/Login";
+
 import Maintenance from "./pages/Maintenance";
 import Dashboard from "./pages/Dashboard";
 import OrganizationSetup from "./pages/OrganizationSetup";
@@ -10,7 +11,6 @@ import ResourceBooking from "./pages/ResourceBooking";
 import Audit from "./pages/Audit";
 import Reports from "./pages/Reports";
 import Notifications from "./pages/Notifications";
-
 import AdminLayout from "./layouts/AdminLayout";
 
 function App() {
@@ -68,6 +68,21 @@ function App() {
           <Route
             path="/notifications"
             element={<Notifications />}
+          />
+
+          <Route
+            path="/assets"
+            element={<Assets />}
+          />
+
+          <Route
+            path="/resource-booking"
+            element={<ResourceBooking />}
+          />
+
+          <Route
+            path="/audit"
+            element={<Audit />}
           />
 
         </Route>
